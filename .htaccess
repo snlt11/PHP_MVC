@@ -1,0 +1,16 @@
+<IfModule mod_rewrite.c >
+
+
+    RewriteEngine On
+
+    RewriteBase /MVC/
+
+    Options -Multiviews
+#   To go to actual folder d and file f don't go to the url
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+#    write rule to get without url
+    RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
+
+
+</IfModule>
