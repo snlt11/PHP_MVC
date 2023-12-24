@@ -1,3 +1,7 @@
 <?php
-echo "This is Index Page";
+
+
+require_once("../app/bootstrap.php");
+new Core();
+
 

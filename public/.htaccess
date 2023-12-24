@@ -3,7 +3,7 @@
 
     RewriteEngine On
 
-    RewriteBase /MVC/
+    RewriteBase /MVC/public/
 
     Options -Multiviews
 #   To go to actual folder d and file f don't go to the url
