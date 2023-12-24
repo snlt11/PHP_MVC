@@ -3,10 +3,13 @@
 
 class Home extends Controller
 {
+    private $userModel;
     public function __construct(){
-        echo "I am Constructor of " . __CLASS__ . " class " . "<br/>";
+        $this->userModel = $this->model("UserModel");
     }
-    public function index(){
-        $this->view("home/index");
+    public function index($data = []){
+        $data = $this->userModel->getAllUser();
+
+        $this->view("home/index", $data);
     }
 }
