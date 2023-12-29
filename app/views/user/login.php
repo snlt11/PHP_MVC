@@ -6,6 +6,9 @@
         <div class="text-center">
             <h1>Post To Login</h1>
         </div>
+        <?php flash('register_success') ?>
+        <?php flash('login_fail') ?>
+
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email address</label>
             <input type="email" class="form-control <?php echo !empty($data['email_error']) ? 'is-invalid' : ''; ?>" name="email" id="email" aria-describedby="emailHelp">

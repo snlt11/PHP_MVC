@@ -15,21 +15,21 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">One</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href=" <?php echo URLROOT ."user/login" ?> ">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href=" <?php echo URLROOT ."user/register" ?>">Register</a>
-                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown
+                        <?php if(getUserSession() != false) :?>
+                            <?php echo getUserSession()->name; ?>
+                        <?php else :?>
+                            Member
+                        <?php endif; ?>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <?php if(getUserSession() != false) :?>
+                            <li><a class="dropdown-item" href="<?php echo URLROOT ."user/logout" ?>">Logout</a></li>
+                        <?php else :?>
+                            <li><a class="dropdown-item" href="<?php echo URLROOT ."user/login" ?>">Login</a></li>
+                            <li><a class="dropdown-item" href="<?php echo URLROOT ."user/register" ?>">Register</a></li>
+                        <?php endif; ?>
                     </ul>
                 </li>
             </ul>
