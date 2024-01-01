@@ -1,5 +1,9 @@
 <?php
 session_start();
+
+function redirect($page){
+    header('Location:'.$page);
+}
 function flash($name = '',$message = ''){
     if(!empty($name)){
         if(!empty($message)){
@@ -13,6 +17,23 @@ function flash($name = '',$message = ''){
                 unset($_SESSION[$name]);
             }
         }
+    }
+}
+
+function setCurrentId($value){
+    if(isset($_SESSION['curId'])){
+        unset($_SESSION['curId']);
+    }
+    $_SESSION['curId'] = $value;
+}
+function getCurrentId(){
+    if(isset($_SESSION['curId'])){
+        return $_SESSION['curId'];
+    }
+}
+function deleteCurrentId(){
+    if(isset($_SESSION['curId'])){
+        unset($_SESSION['curId']);
     }
 }
 

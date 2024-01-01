@@ -5,13 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a0b91d7-0c1a-4f9e-8b06-d0a5c5a3145f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/helpers/helper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/Admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/Category.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/CategoryModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/admin/category/edit.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/admin/category/home.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/admin/home.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/inc/sidebar.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/bootstrap.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/helper.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/UserModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/UserModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/home/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/user/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/user/login.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +92,12 @@
       <workItem from="1703738305777" duration="863000" />
       <workItem from="1703772086557" duration="5119000" />
       <workItem from="1703842085749" duration="4667000" />
+      <workItem from="1703861646913" duration="7878000" />
+      <workItem from="1703921783451" duration="8906000" />
+      <workItem from="1703996655754" duration="2001000" />
+      <workItem from="1704097256628" duration="78000" />
+      <workItem from="1704097357640" duration="151000" />
+      <workItem from="1704098197359" duration="4882000" />
     </task>
     <servers />
   </component>
@@ -116,6 +126,15 @@
             <option name="methodName" value="register" />
           </properties>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/app/controllers/Category.php</url>
+          <line>7</line>
+          <properties>
+            <option name="className" value="\Category" />
+            <option name="methodName" value="create" />
+          </properties>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

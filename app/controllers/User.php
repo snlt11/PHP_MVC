@@ -79,10 +79,10 @@ class User extends Controller
                 $rowUser = $this->userModel->getUserByEmail($data['email']);
                 if($rowUser){
                         $hash_password = $rowUser->password;
-                        setUserSession($rowUser);
                         if(password_verify($data['password'],$hash_password)){
-                            flash('login_success',"Welcome back");
-                            $this->view('home/index');
+                            setUserSession($rowUser);
+                            redirect(URLROOT . 'admin/home');
+
                         }else{
                             flash('login_fail',"User Login Failed");
                             $this->view('user/login');

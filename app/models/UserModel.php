@@ -28,9 +28,7 @@ class UserModel
             return $row;
         }
     }
-//    public function get(){
-//
-//    }
+
 
 
 }
