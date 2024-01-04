@@ -47,6 +47,24 @@ class Category extends Controller
         ];
         $dta['cats'] = $this->catModel->getAllCategory();
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            $dta['name'] = $_POST['name'];
+            if(!empty($dta['name'])){
+                if($this->catModel->updateCategory(getCurrentId(),$dta['name'])){
+                    deleteCurrentId();
+                    redirect( URLROOT.'category/create');
+                }else{
+                    $dta['current_cats'] = $this->catModel->getCategoryById(getCurrentId());
+                    deleteCurrentId();
+                    flash('cat_edit_error',"category update failed");
+                    redirect(URLROOT.'admin/category/edit',$dta);
+                }
+
+            }else{
+                $dta['name_error'] = "Category name is required";
+                $dta['current_cats'] = $this->catModel->getCategoryById(getCurrentId());
+                deleteCurrentId();
+                $this->view('admin/category/edit',$dta);
+            }
 
 
         }else{
@@ -56,6 +74,14 @@ class Category extends Controller
         }
 
 
+    }
+
+    public function delete($data = []){
+        if($this->catModel->deleteCategory($data[0])){
+            redirect(URLROOT.'category/create');
+        }else{
+            redirect(URLROOT.'category/create');
+        }
     }
 
 }

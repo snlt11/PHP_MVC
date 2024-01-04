@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="<?php echo URLROOT ?>">
             <img src="<?php echo URLROOT . "assets/imgs/logo.jpg" ?>" alt="logophoto" width="30" height="30"/>
             Navbar
         </a>
@@ -9,9 +9,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
+                <?php if(getUserSession()) : ?>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="<?php echo URLROOT . 'admin/home' ?>">Admin Pannel</a>
+                    </li>
+                <?php endif; ?>
+
+
                 <li class="nav-item">
                     <a class="nav-link" href="#">One</a>
                 </li>
